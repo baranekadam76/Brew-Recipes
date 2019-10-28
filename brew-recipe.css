@@ -4,3 +4,63 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: verdana;
+}
+
+#header-main {
+	display: flex;
+	width: 100vw;
+	height: 10vh;
+}
+
+#header-sub1 {
+	background-color: lightgreen;
+	width: 30vw;
+	height: 10vh;
+	text-align: center;
+	font-size: 45px;
+	padding-top: 20px;
+}
+
+#header-sub2 {
+	display: flex;
+	width: 70vw;
+	height: 10vh;
+}
+#header-sub2 > button {
+	width: 25%;
+	height: 10vh;
+	margin: auto;
+	font-size: 35px;
+}
+
+#wrapper {
+	display: flex;
+	width: 100vw;
+	height: 1000px;
+}
+
+#bg-left {
+	background-color: lightblue;
+	width: 25%;
+	height: 1000px;
+}
+
+#main-content {
+	background-color: lightgray;
+	width: 50%;
+	height: 1000px;
+}
+
+#bg-right {
+	background-color: lightblue;
+	width: 25%;
+	height: 1000px;
+}
+
+
+
+
+/*Elements that were created via JavaScript*/
+
