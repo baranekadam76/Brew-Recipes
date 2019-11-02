@@ -10,3 +10,4 @@ recommendLink.addEventListener('click', () => window.location='http://www.google
 
 let statsLink = document.getElementById('stats');
 statsLink.addEventListener('click', () => window.location='http://www.google.com');
+
