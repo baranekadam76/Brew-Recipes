@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendations</title>	
+	<link rel="stylesheet" type="text/css" href="recommend.css">
+	<link rel="stylesheet" type="text/css" href="brew-recipe.css">
+</head>
+<body>
+
+<div id="recommend-main">
+	<div id="recommend-title">Recommendations</div>
+	<a href="brew-recipes.html"><button id="brew-home">Home</button></a>
+</div>
+
+<div id="recommend-wrapper">
+	<form id="recommend-form">
+		<div>
+			<label>Experience Level:</label>
+			<select id="exp-dropdown" name="exp_level">
+				<option>Beginner (never brewed)</option>
+				<option>Intermediate (brewed a few times)</option>
+				<option>Advanced (brewed dozens of times)</option>
+			</select>
+		</div>
+		<div>
+			<label>Type:</label>
+			<select name="brew_style" id="choose-brew">
+				<option value="beer">Beer</option>
+				<option value="cider">Cider</option>
+			</select>
+		</div>
+		<div>
+			<span>This label will be created via JavaScript and will display one of two possible dropdowns that represent Flavor Profile (depends on beer or cider selection from previous dropdown).</span>
+		</div>
+		<div>
+			<label>ABV:</label>
+			<input type="number" name="min_abv" id="min-abv">% -
+			<input type="number" name="max_abv" id="max-abv">% 
+			<span>Build JavaScript to make sure user fills out both fields. It's a range of ABV.</span>
+		</div>
+		<div>
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+
+	<div id="recommend-results">
+		Results of the recommendation form above will appear here. They will be links that will take you directly to the recipe pages. 
+	</div>
+</div>
+
+<script type="text/javascript" src="brew-recipe.js"></script>
+</body>
+</html>
