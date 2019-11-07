@@ -1,3 +1,19 @@
+let beerBrews = [];
+let ciderBrews = [];
+let brewRatings = {
+	beer1: [],
+	beer2: [],
+	beer3: [],
+	beer4: [],
+	cider1: []
+};
+let userReviews = {
+	beer1: [],
+	beer2: [],
+	beer3: [],
+	beer4: [],
+	cider1: []
+};
 
 
 
