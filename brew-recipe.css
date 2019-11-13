@@ -64,3 +64,28 @@ body {
 
 /*Elements that were created via JavaScript*/
 
+.beer-links-header {
+	background-color: orange;
+	display: flex;
+	flex-wrap: wrap;
+}
+.beer-links-header > div {
+	background-color: pink;
+	width: 25%;
+	height: 5vh;
+	text-align: center;
+	padding-top: 1.5vh;
+}
+.beer-links-header > div:first-child {
+	background-color: pink;
+	font-size: 1em;
+	color: black;
+	transition: background-color 500ms, font-size 500ms, color 500ms;
+}
+.beer-links-header > div:first-child:hover {
+	background-color: purple;
+	color: white;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
