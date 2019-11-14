@@ -73,9 +73,9 @@ function beerRecipes() {
 
 	//Beer Links to navigate to recipe page for each beer
 	let beerLinks1 = document.getElementById('beer-links-1');
-	beerLinks1.addEventListener('click', () => window.location='test-recipe.html');
+	beerLinks1.addEventListener('click', () => window.location='beer1.html');
 	let beerLinks2 = document.getElementById('beer-links-2');
-	beerLinks2.addEventListener('click', () => window.location='test-recipe.html');
+	beerLinks2.addEventListener('click', () => window.location='beer2.html');
 }
 
 function ciderRecipes() {
@@ -94,9 +94,9 @@ function ciderRecipes() {
 
 	//Cider Links to navigate to recipe page for each cider
 	let ciderLinks1 = document.getElementById('cider-links-1');
-	ciderLinks1.addEventListener('click', () => window.location='test-recipe.html');
+	ciderLinks1.addEventListener('click', () => window.location='cider1.html');
 	let ciderLinks2 = document.getElementById('cider-links-2');
-	ciderLinks2.addEventListener('click', () => window.location='test-recipe.html');
+	ciderLinks2.addEventListener('click', () => window.location='cider2.html');
 }
 
 
