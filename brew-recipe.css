@@ -88,4 +88,29 @@ body {
 	font-size: 1.1em;
 	cursor: pointer;
 }
+.cider-links-header {
+	background-color: green;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cider-links-header > div {
+	background-color: pink;
+	width: 25%;
+	height: 5vh;
+	text-align: center;
+	padding-top: 1.5vh;
+}
+.cider-links-header > div:first-child {
+	background-color: pink;
+	font-size: 1em;
+	color: black;
+	transition: background-color 500ms, font-size 500ms, color 500ms;
+}
+.cider-links-header > div:first-child:hover {
+	background-color: blue;
+	color: white;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
 
