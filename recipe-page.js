@@ -1,3 +1,7 @@
+//Rate this Brew button that takes you to rate/review page
+let rateBut = document.getElementById('rateBrew');
+rateBut.addEventListener('click', () => window.location = 'rate-review.html');
+
 
 
 
