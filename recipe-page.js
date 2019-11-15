@@ -8,9 +8,11 @@ function printList() {
 	document.getElementById('recipe-main').innerHTML = '';
 	document.getElementById('print').innerHTML = '';
 	document.getElementById('user-comments').innerHTML = '';
+	document.getElementById('recipe-wrapper').style.bottom = '10vh';
 	window.print();
 	document.getElementById('recipe-main').innerHTML = `
-		<a href="brew-recipes.html"><button id="brew-home">Home</button></a>
+		<a href="brew-recipes.html"><button id="brew-home" style="
+		width:100vw;height:10vh;font-size:1.5em;">Home</button></a>
 	`;
 }
 let printBut = document.getElementById('print');
