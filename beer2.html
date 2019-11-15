@@ -6,6 +6,29 @@
 	<link rel="stylesheet" type="text/css" href="recipe.css">
 </head>
 <body>
+<div id="rate-wrapper">
+	<form id="rate-form" action="brew-forms.php" method="post">
+		<div>
+			<label>Your Name:</label>
+			<input type="text" name="name" id="user-name" required="yes"> <span style="color: red;">*</span>
+		</div>
+		<div>
+			<label>Your Email:</label>
+			<input type="email" name="email" id="user-email" required="yes"> <span style="color: red;">*</span>
+		</div>
+		<div>
+			<label>Rating:</label>
+			<input type="text" name="brew_rating" id="rating" required="yes"> <span style="color: red;">*</span>
+		</div>
+		<div>
+			<label>Comments/Suggestions:</label><br>
+			<textarea name="brew_comments" id="comments"></textarea>
+		</div>
+		<div>
+			<input type="submit" name="submit" value="Submit">
+		</div>
+	</form>
+</div>
 
 <div id="recipe-main">
 	<div id="recipe-title">Gluten Free Beer #2</div>

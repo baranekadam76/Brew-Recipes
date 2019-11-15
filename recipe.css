@@ -68,3 +68,21 @@
 }
 
 
+#rate-wrapper {
+	background-color: #F9AE57;
+	position: absolute;
+	width: 20vw;
+	height: 500px;
+	margin: auto;
+	top: 30vh;
+	left: 40vw;
+	z-index: 1;
+	box-shadow: 20px 20px 30px black;
+	border-radius: 10px;
+	visibility: hidden;
+}
+#rate-form > div {
+	margin-bottom: 3vh;
+	width: 100%;
+	height: auto;
+}

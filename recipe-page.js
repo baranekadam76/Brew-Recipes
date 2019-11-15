@@ -1,6 +1,13 @@
-//Rate this Brew button that takes you to rate/review page
+//Rate this Brew button that opens a hidden form on the same screen
+//Just need a way to exit the form without hitting submit
+function rateReview() {
+	document.getElementById('rate-wrapper').style.visibility = 'visible';
+	document.getElementById('recipe-main').style.opacity = '0.3';
+	document.getElementById('recipe-wrapper').style.opacity = '0.3';
+	document.getElementById('user-comments').style.opacity = '0.3';
+}
 let rateBut = document.getElementById('rateBrew');
-rateBut.addEventListener('click', () => window.location = 'rate-review.html');
+rateBut.addEventListener('click', rateReview);
 
 
 
