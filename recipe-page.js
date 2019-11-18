@@ -1,5 +1,4 @@
 //Rate this Brew button that opens a hidden form on the same screen
-//Just need a way to exit the form without hitting submit
 function rateReview() {
 	document.getElementById('rate-wrapper').style.visibility = 'visible';
 	document.getElementById('recipe-main').style.opacity = '0.3';
@@ -8,6 +7,31 @@ function rateReview() {
 }
 let rateBut = document.getElementById('rateBrew');
 rateBut.addEventListener('click', rateReview);
+
+//Submit and Close buttons - Submit button downloads a CSV with the form data
+function exitReview() {
+	document.getElementById('rate-wrapper').style.visibility = 'hidden';
+	document.getElementById('recipe-main').style.opacity = '1';
+	document.getElementById('recipe-wrapper').style.opacity = '1';
+	document.getElementById('user-comments').style.opacity = '1';
+}
+let exitBut = document.getElementById('exitBrew');
+exitBut.addEventListener('click', exitReview);
+
+function submitReview() {
+	let userName = document.getElementById('user-name').value;
+	let userRating = document.getElementById('rating').value;
+	let userComments = document.getElementById('comments').value;
+	let brewName = document.getElementById('recipe-title').innerHTML;
+
+	let csv = `Username,Brew,Rating,Comments
+	${userName},${brewName},${userRating},${userComments}`;
+	let data = new Blob([csv]);
+	let submitForm = document.getElementById('x');
+	submitForm.href = URL.createObjectURL(data);
+}
+let submitForm2 = document.getElementById('x');
+submitForm2.addEventListener('click', submitReview);
 
 
 
