@@ -88,6 +88,23 @@ body {
 	font-size: 1.1em;
 	cursor: pointer;
 }
+.beer-links-header2 {
+	background-color: white;
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+.beer-links-header2 > div {
+	width: 25%;
+	height: 5vh;
+	text-align: center;
+	padding-top: 1.5vh;
+	border-right: 1px solid black;
+}
+.beer-links-header2 > div:last-child {
+	border-right: none;
+}
+
 .cider-links-header {
 	background-color: green;
 	display: flex;
@@ -112,5 +129,23 @@ body {
 	font-size: 1.1em;
 	cursor: pointer;
 }
+.cider-links-header2 {
+	background-color: white;
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cider-links-header2 > div {
+	width: 25%;
+	height: 5vh;
+	text-align: center;
+	padding-top: 1.5vh;
+	border-right: 1px solid black;
+}
+.cider-links-header2 > div:last-child {
+	border-right: none;
+}
+
+
 
 

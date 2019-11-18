@@ -42,6 +42,14 @@ let ciderBrews = [ciderLink1, ciderLink2];
 //Beer and Cider buttons for links to the recipes
 function beerRecipes() {
 	document.getElementById('main-content').innerHTML = '';
+	document.getElementById('main-content').innerHTML = `
+		<div class="beer-links-header2">
+			<div>Beer Name</div>
+			<div>Style</div>
+			<div>ABV</div>
+			<div>Rating</div>
+		</div>
+		`;
 
 	for (let i = 0; i < beerBrews.length; i++) {
 		document.getElementById('main-content').innerHTML += `
@@ -63,6 +71,14 @@ function beerRecipes() {
 
 function ciderRecipes() {
 	document.getElementById('main-content').innerHTML = '';
+	document.getElementById('main-content').innerHTML = `
+		<div class="cider-links-header2">
+			<div>Cider Name</div>
+			<div>Style</div>
+			<div>ABV</div>
+			<div>Rating</div>
+		</div>
+		`;
 
 	for (let i = 0; i < ciderBrews.length; i++) {
 		document.getElementById('main-content').innerHTML += `
@@ -86,3 +102,9 @@ function ciderRecipes() {
 
 
 
+//Filter functionality for the homepage
+function search() {
+	let searchValue = document.getElementById('userInput').value;
+
+	
+}
