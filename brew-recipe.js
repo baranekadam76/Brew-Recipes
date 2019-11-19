@@ -26,7 +26,7 @@ function Brewbuilder(name, style, abv, rating) {
 	this.brewABV = abv;
 	this.brewRating = rating;
 }
-let beerLink1 = new Brewbuilder('Gluten Free Beer #1', 'Pale Ale', '4.8%', finalRatings.beer1);
+let beerLink1 = new Brewbuilder('zGluten Free Beer #1', 'Pale Ale', '4.8%', finalRatings.beer1);
 let beerLink2 = new Brewbuilder('Gluten Free Beer #2', 'IPA', '5.5%', finalRatings.beer2);
 let ciderLink1 = new Brewbuilder('Cider #1', 'Dry', '5%', finalRatings.cider1);
 let ciderLink2 = new Brewbuilder('Cider #2', 'Very-Sweet', '5.7%', finalRatings.cider2);
@@ -50,6 +50,8 @@ function beerRecipes() {
 			<div id="beerCol4">Rating</div>
 		</div>
 		`;
+	document.getElementById('bg-right').innerHTML = `<div> <---
+		Click on the headings to sort!</div>`;
 
 	for (let i = 0; i < beerBrews.length; i++) {
 		document.getElementById('main-content').innerHTML += `
@@ -89,6 +91,8 @@ function ciderRecipes() {
 			<div id="ciderCol4">Rating</div>
 		</div>
 		`;
+	document.getElementById('bg-right').innerHTML = `<div> <---
+		Click on the headings to sort!</div>`;
 
 	for (let i = 0; i < ciderBrews.length; i++) {
 		document.getElementById('main-content').innerHTML += `
@@ -134,21 +138,168 @@ function search() {
 
 
 //Sort functionality for the Home page
-let sortSwitch = 0;
+let beerSwitch1 = 0;
+let beerSwitch2 = 0;
+let beerSwitch3 = 0;
+let beerSwitch4 = 0;
+let ciderSwitch1 = 0;
+let ciderSwitch2 = 0;
+let ciderSwitch3 = 0;
+let ciderSwitch4 = 0;
 
 function beerSort1() {
-	//let beerStrings = []; use an array to push beer names to it so I can sort them
-
-	if (sortSwitch === 0) {
-
-		sortSwitch = 1;
+	if (beerSwitch1 === 0) {
+		beerBrews.sort((a,b)=>a.brewName<b.brewName?-1:a.brewName>b.brewName?1:0);
+		beerRecipes();
+		document.getElementById('beerCol1').innerHTML = 'Beer Name ^';
+		beerSwitch1 = 1;
 	}
-	else if (sortSwitch === 1) {
-
-		sortSwitch = 0;
+	else if (beerSwitch1 === 1) {
+		beerBrews.sort((a,b)=>a.brewName<b.brewName?1:a.brewName>b.brewName?-1:0);
+		beerRecipes();
+		document.getElementById('beerCol1').innerHTML = 'Beer Name v';
+		beerSwitch1 = 2;
 	}
 	else {
-		alert('An error has occured');
+		beerRecipes();
+		beerSwitch1 = 0;
 	}
+	
 }
+function beerSort2() {
+	if (beerSwitch2 === 0) {
+		beerBrews.sort((a,b)=>a.brewStyle<b.brewStyle?-1:a.brewStyle>b.brewStyle?1:0);
+		beerRecipes();
+		document.getElementById('beerCol2').innerHTML = 'Style ^';
+		beerSwitch2 = 1;
+	}
+	else if (beerSwitch2 === 1) {
+		beerBrews.sort((a,b)=>a.brewStyle<b.brewStyle?1:a.brewStyle>b.brewStyle?-1:0);
+		beerRecipes();
+		document.getElementById('beerCol2').innerHTML = 'Style v';
+		beerSwitch2 = 2;
+	}
+	else {
+		beerRecipes();
+		beerSwitch2 = 0;
+	}
+	
+}
+function beerSort3() {
+	if (beerSwitch3 === 0) {
+		beerBrews.sort((a,b)=>a.brewABV<b.brewABV?-1:a.brewABV>b.brewABV?1:0);
+		beerRecipes();
+		document.getElementById('beerCol3').innerHTML = 'ABV ^';
+		beerSwitch3 = 1;
+	}
+	else if (beerSwitch3 === 1) {
+		beerBrews.sort((a,b)=>a.brewABV<b.brewABV?1:a.brewABV>b.brewABV?-1:0);
+		beerRecipes();
+		document.getElementById('beerCol3').innerHTML = 'ABV v';
+		beerSwitch3 = 2;
+	}
+	else {
+		beerRecipes();
+		beerSwitch3 = 0;
+	}
+	
+}
+function beerSort4() {
+	if (beerSwitch4 === 0) {
+		beerBrews.sort((a,b)=>a.brewRating<b.brewRating?-1:a.brewRating>b.brewRating?1:0);
+		beerRecipes();
+		document.getElementById('beerCol4').innerHTML = 'Rating ^';
+		beerSwitch4 = 1;
+	}
+	else if (beerSwitch4 === 1) {
+		beerBrews.sort((a,b)=>a.brewRating<b.brewRating?1:a.brewRating>b.brewRating?-1:0);
+		beerRecipes();
+		document.getElementById('beerCol4').innerHTML = 'Rating v';
+		beerSwitch4 = 2;
+	}
+	else {
+		beerRecipes();
+		beerSwitch4 = 0;
+	}
+	
+}
+
+function ciderSort1() {
+	if (ciderSwitch1 === 0) {
+		ciderBrews.sort((a,b)=>a.brewName<b.brewName?-1:a.brewName>b.brewName?1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol1').innerHTML = 'Cider Name ^';
+		ciderSwitch1 = 1;
+	}
+	else if (ciderSwitch1 === 1) {
+		ciderBrews.sort((a,b)=>a.brewName<b.brewName?1:a.brewName>b.brewName?-1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol1').innerHTML = 'Cider Name v';
+		ciderSwitch1 = 2;
+	}
+	else {
+		ciderRecipes();
+		ciderSwitch1 = 0;
+	}
+	
+}
+function ciderSort2() {
+	if (ciderSwitch2 === 0) {
+		ciderBrews.sort((a,b)=>a.brewStyle<b.brewStyle?-1:a.brewStyle>b.brewStyle?1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol2').innerHTML = 'Style ^';
+		ciderSwitch2 = 1;
+	}
+	else if (ciderSwitch2 === 1) {
+		ciderBrews.sort((a,b)=>a.brewStyle<b.brewStyle?1:a.brewStyle>b.brewStyle?-1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol2').innerHTML = 'Style v';
+		ciderSwitch2 = 2;
+	}
+	else {
+		ciderRecipes();
+		ciderSwitch2 = 0;
+	}
+	
+}
+function ciderSort3() {
+	if (ciderSwitch3 === 0) {
+		ciderBrews.sort((a,b)=>a.brewABV<b.brewABV?-1:a.brewABV>b.brewABV?1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol3').innerHTML = 'ABV ^';
+		ciderSwitch3 = 1;
+	}
+	else if (ciderSwitch3 === 1) {
+		ciderBrews.sort((a,b)=>a.brewABV<b.brewABV?1:a.brewABV>b.brewABV?-1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol3').innerHTML = 'ABV v';
+		ciderSwitch3 = 2;
+	}
+	else {
+		ciderRecipes();
+		ciderSwitch3 = 0;
+	}
+	
+}
+function ciderSort4() {
+	if (ciderSwitch4 === 0) {
+		ciderBrews.sort((a,b)=>a.brewRating<b.brewRating?-1:a.brewRating>b.brewRating?1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol4').innerHTML = 'Rating ^';
+		ciderSwitch4 = 1;
+	}
+	else if (ciderSwitch4 === 1) {
+		ciderBrews.sort((a,b)=>a.brewRating<b.brewRating?1:a.brewRating>b.brewRating?-1:0);
+		ciderRecipes();
+		document.getElementById('ciderCol4').innerHTML = 'Rating v';
+		ciderSwitch4 = 2;
+	}
+	else {
+		ciderRecipes();
+		ciderSwitch4 = 0;
+	}
+	
+}
+
+
 
