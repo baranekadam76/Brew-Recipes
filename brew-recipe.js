@@ -44,10 +44,10 @@ function beerRecipes() {
 	document.getElementById('main-content').innerHTML = '';
 	document.getElementById('main-content').innerHTML = `
 		<div class="beer-links-header2">
-			<div>Beer Name</div>
-			<div>Style</div>
-			<div>ABV</div>
-			<div>Rating</div>
+			<div id="beerCol1">Beer Name</div>
+			<div id="beerCol2">Style</div>
+			<div id="beerCol3">ABV</div>
+			<div id="beerCol4">Rating</div>
 		</div>
 		`;
 
@@ -62,6 +62,16 @@ function beerRecipes() {
 		`;
 	}
 
+	//Header Columns to press for sorting capabilities
+	let beerCol1 = document.getElementById('beerCol1');
+	beerCol1.addEventListener('click', beerSort1);
+	let beerCol2 = document.getElementById('beerCol2');
+	beerCol2.addEventListener('click', beerSort2);
+	let beerCol3 = document.getElementById('beerCol3');
+	beerCol3.addEventListener('click', beerSort3);
+	let beerCol4 = document.getElementById('beerCol4');
+	beerCol4.addEventListener('click', beerSort4);
+
 	//Beer Links to navigate to recipe page for each beer
 	let beerLinks1 = document.getElementById('beer-links-1');
 	beerLinks1.addEventListener('click', () => window.location='beer1.html');
@@ -73,10 +83,10 @@ function ciderRecipes() {
 	document.getElementById('main-content').innerHTML = '';
 	document.getElementById('main-content').innerHTML = `
 		<div class="cider-links-header2">
-			<div>Cider Name</div>
-			<div>Style</div>
-			<div>ABV</div>
-			<div>Rating</div>
+			<div id="ciderCol1">Cider Name</div>
+			<div id="ciderCol2">Style</div>
+			<div id="ciderCol3">ABV</div>
+			<div id="ciderCol4">Rating</div>
 		</div>
 		`;
 
@@ -91,6 +101,16 @@ function ciderRecipes() {
 		`;
 	}
 
+	//Header Columns to press for sorting capabilities
+	let ciderCol1 = document.getElementById('ciderCol1');
+	ciderCol1.addEventListener('click', ciderSort1);
+	let ciderCol2 = document.getElementById('ciderCol2');
+	ciderCol2.addEventListener('click', ciderSort2);
+	let ciderCol3 = document.getElementById('ciderCol3');
+	ciderCol3.addEventListener('click', ciderSort3);
+	let ciderCol4 = document.getElementById('ciderCol4');
+	ciderCol4.addEventListener('click', ciderSort4);
+
 	//Cider Links to navigate to recipe page for each cider
 	let ciderLinks1 = document.getElementById('cider-links-1');
 	ciderLinks1.addEventListener('click', () => window.location='cider1.html');
@@ -102,9 +122,33 @@ function ciderRecipes() {
 
 
 
-//Filter functionality for the homepage
+//Filter functionality for the Home page
 function search() {
 	let searchValue = document.getElementById('userInput').value;
 
-	
+
 }
+
+
+
+
+
+//Sort functionality for the Home page
+let sortSwitch = 0;
+
+function beerSort1() {
+	//let beerStrings = []; use an array to push beer names to it so I can sort them
+
+	if (sortSwitch === 0) {
+
+		sortSwitch = 1;
+	}
+	else if (sortSwitch === 1) {
+
+		sortSwitch = 0;
+	}
+	else {
+		alert('An error has occured');
+	}
+}
+
