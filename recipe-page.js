@@ -24,14 +24,27 @@ function submitReview() {
 	let userComments = document.getElementById('comments').value;
 	let brewName = document.getElementById('recipe-title').innerHTML;
 
-	let csv = `Username,Brew,Rating,Comments
-	${userName},${brewName},${userRating},${userComments}`;
-	let data = new Blob([csv]);
-	let submitForm = document.getElementById('x');
-	submitForm.href = URL.createObjectURL(data);
+	if (userRating >= 0 && userRating <= 10) {
+		let csv = `Username,Brew,Rating,Comments
+		${userName},${brewName},${userRating},${userComments}`;
+		let data = new Blob([csv]);
+		let submitForm = document.getElementById('x');
+		submitForm.href = URL.createObjectURL(data);
+
+		exitReview();
+		document.getElementById('rateBrew').style.visibility = 'hidden';
+	}
+	else {
+		document.getElementById('rateError').innerHTML = 'Please add a rating between 0 and 10!';
+		document.getElementById('rating').innerHTML = '';
+	}
+	
 }
 let submitForm2 = document.getElementById('x');
 submitForm2.addEventListener('click', submitReview);
+let ratingClear = document.getElementById('rating');
+ratingClear.addEventListener('click', ()=>{document.getElementById('rateError').innerHTML = '';
+document.getElementById('rating').value = '';})
 
 
 

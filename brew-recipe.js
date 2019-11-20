@@ -126,17 +126,6 @@ function ciderRecipes() {
 
 
 
-//Filter functionality for the Home page
-function search() {
-	let searchValue = document.getElementById('userInput').value;
-
-
-}
-
-
-
-
-
 //Sort functionality for the Home page
 let beerSwitch1 = 0;
 let beerSwitch2 = 0;

@@ -32,6 +32,9 @@
 	margin: auto;
 	margin-top: 10vh;
 }
+#recommend-form {
+	background-color: lightblue;
+}
 #recommend-form > div {
 	margin-bottom: 3vh;
 }
