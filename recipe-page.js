@@ -59,11 +59,13 @@ function printList() {
 	document.getElementById('recipe-wrapper').style.bottom = '10vh';
 	window.print();
 	document.getElementById('recipe-main').innerHTML = `
-		<a href="brew-recipes.html"><button id="brew-home" style="
-		width:100vw;height:10vh;font-size:1.5em;">Home</button></a>
+		<button id="brew-home" style="width:100vw;height:10vh;font-size:1.5em;">Home</button>
 	`;
 }
 let printBut = document.getElementById('print');
 printBut.addEventListener('click', printList);
 
 
+
+let goHome = document.getElementById('brew-home');
+goHome.addEventListener('click', () => window.location = 'brew-recipes.html');

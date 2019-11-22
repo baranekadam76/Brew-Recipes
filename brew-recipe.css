@@ -15,7 +15,6 @@ body {
 }
 
 #header-sub1 {
-	background-color: lightgreen;
 	width: 30vw;
 	height: 10vh;
 	text-align: center;
@@ -29,32 +28,46 @@ body {
 	height: 10vh;
 }
 #header-sub2 > button {
+	position: relative;
+	top: 0;
 	width: 25%;
 	height: 10vh;
 	margin: auto;
 	font-size: 35px;
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	border: none;
+	border-radius: 0;
+	transition: border-radius 500ms, background-color 500ms, top 500ms, text-shadow 500ms, color 500ms;
+}
+#header-sub2 > button:hover {
+	top: 10px;
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	background-color: #AEDAAC;
+	border-radius: 15px;
+	cursor: pointer;
 }
 
 #wrapper {
 	display: flex;
 	width: 100vw;
 	height: 1000px;
+	margin-top: 50px;
 }
 
 #bg-left {
-	background-color: lightblue;
 	width: 25%;
 	height: 1000px;
 }
 
 #main-content {
-	background-color: lightgray;
 	width: 50%;
 	height: 1000px;
 }
 
 #bg-right {
-	background-color: lightblue;
 	width: 25%;
 	height: 1000px;
 }
@@ -65,31 +78,29 @@ body {
 /*Elements that were created via JavaScript*/
 
 .beer-links-header {
-	background-color: orange;
+	background-color: white;
 	display: flex;
 	flex-wrap: wrap;
+	font-size: 1em;
+	color: black;
+	text-shadow: none;
+	transition: background-color 250ms, font-size 250ms, color 250ms;
+}
+.beer-links-header:hover {
+	background-color: #BAD486;
+	color: white;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 2px black;
+	cursor: pointer;
 }
 .beer-links-header > div {
-	background-color: pink;
 	width: 25%;
 	height: 5vh;
 	text-align: center;
 	padding-top: 1.5vh;
 }
-.beer-links-header > div:first-child {
-	background-color: pink;
-	font-size: 1em;
-	color: black;
-	transition: background-color 500ms, font-size 500ms, color 500ms;
-}
-.beer-links-header > div:first-child:hover {
-	background-color: purple;
-	color: white;
-	font-size: 1.1em;
-	cursor: pointer;
-}
+
 .beer-links-header2 {
-	background-color: white;
 	border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
@@ -101,36 +112,39 @@ body {
 	padding-top: 1.5vh;
 	border-right: 1px solid black;
 }
+.beer-links-header2 > div:hover {
+	box-shadow: 1px 1px 10px black;
+}
 .beer-links-header2 > div:last-child {
 	border-right: none;
 }
 
+
+
+
 .cider-links-header {
-	background-color: green;
 	display: flex;
 	flex-wrap: wrap;
+	font-size: 1em;
+	color: black;
+	text-shadow: none;
+	transition: background-color 250ms, font-size 250ms, color 250ms;
+}
+.cider-links-header:hover {
+	background-color: #E4E490;
+	color: white;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 2px black;
+	cursor: pointer;
 }
 .cider-links-header > div {
-	background-color: pink;
 	width: 25%;
 	height: 5vh;
 	text-align: center;
 	padding-top: 1.5vh;
 }
-.cider-links-header > div:first-child {
-	background-color: pink;
-	font-size: 1em;
-	color: black;
-	transition: background-color 500ms, font-size 500ms, color 500ms;
-}
-.cider-links-header > div:first-child:hover {
-	background-color: blue;
-	color: white;
-	font-size: 1.1em;
-	cursor: pointer;
-}
+
 .cider-links-header2 {
-	background-color: white;
 	border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
@@ -141,6 +155,9 @@ body {
 	text-align: center;
 	padding-top: 1.5vh;
 	border-right: 1px solid black;
+}
+.cider-links-header2 > div:hover {
+	box-shadow: 1px 1px 10px black;
 }
 .cider-links-header2 > div:last-child {
 	border-right: none;
