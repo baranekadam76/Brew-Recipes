@@ -65,41 +65,110 @@
 	height: auto;
 	margin-top: 10vh;
 }
-#recipe-wrapper > div {
+#recipe-left {
 	width: 40%;
-	height: 500px;
-	background-color: lightblue;
-	padding: 20px;
+	height: 50px;
+	overflow: hidden;
+	background-color: lightgrey;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: none;
+	transition: border 500ms, background-color 500ms, box-shadow 500ms, height 1000ms, padding 500ms;
 }
+#recipe-left:hover {
+	border: 1px solid black;
+	background-color: white;
+	box-shadow: 5px 5px 20px black;
+	height: 500px;
+	padding: 30px;
+}
+#recipe-left div:first-child {
+	text-align: center;
+}
+#recipe-right {
+	width: 40%;
+	height: 50px;
+	overflow: hidden;
+	background-color: lightgrey;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: none;
+	transition: border 500ms, background-color 500ms, box-shadow 500ms, height 1000ms, padding 500ms;
+}
+#recipe-right:hover {
+	border: 1px solid black;
+	background-color: white;
+	box-shadow: 5px 5px 20px black;
+	height: 500px;
+	padding: 30px;
+}
+#recipe-right div:first-child {
+	text-align: center;
+}
+
 
 
 #user-comments {
 	display: flex;
 	justify-content: space-around;
 	max-width: 100vw;
-	height: auto;
+	height: 50px;
 	margin-top: 10vh;
 }
-#user-comments > div {
-	width: 40%;
-	height: 500px;
-	background-color: lightgray;
-	padding: 20px;
-}
-#reviews-comments > div {
+#review-heading > div {
+	text-align: center;
 	width: 100%;
 	height: auto;
 	margin-bottom: 30px;
 }
+#review-heading {
+	width: 40%;
+	height: 50px;
+	overflow: hidden;
+	background-color: lightgrey;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: none;
+	transition: border 500ms, background-color 500ms, box-shadow 500ms, height 1000ms, padding 500ms;
+}
+#review-heading:hover {
+	border: 1px solid black;
+	background-color: white;
+	box-shadow: 5px 5px 20px black;
+	height: 500px;
+	padding: 30px;
+}
+#review-heading div:first-child {
+	text-align: center;
+}
+#rateBrew {
+	width: 40vw;
+	height: 50px;
+	background-color: lightgrey;
+	border-radius: 10px;
+	border: none;
+	box-shadow: none;
+	transition: border 500ms, background-color 500ms, box-shadow 500ms;
+}
+#rateBrew:hover {
+	border: 1px solid black;
+	background-color: white;
+	box-shadow: 5px 5px 20px black;
+	cursor: pointer;
+}
+
 
 
 #rate-wrapper {
-	background-color: #F9AE57;
+	background-color: white;
 	position: absolute;
 	width: 20vw;
 	height: 500px;
 	margin: auto;
-	top: 30vh;
+	top: 20vh;
 	left: 40vw;
 	z-index: 1;
 	box-shadow: 20px 20px 30px black;
@@ -110,4 +179,51 @@
 	margin-bottom: 3vh;
 	width: 100%;
 	height: auto;
+}
+#rate-form > div:last-child {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+#x {
+	display: inline-block;
+	width: 125px;
+	height: auto;
+	padding: 10px;
+	font-size: 15px;
+	text-align: center;
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	border: none;
+	border-radius: 0;
+	transition: border-radius 500ms, background-color 500ms, text-shadow 500ms, color 500ms;
+}
+#x:hover {
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	background-color: #AEDAAC;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#exitBrew {
+	display: inline-block;
+	width: 125px;
+	height: auto;
+	padding: 10px;
+	font-size: 15px;
+	text-align: center;
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	border: none;
+	border-radius: 0;
+	transition: border-radius 500ms, background-color 500ms, text-shadow 500ms, color 500ms;
+}
+#exitBrew:hover {
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	background-color: #DF91A1;
+	border-radius: 10px;
+	cursor: pointer;
 }

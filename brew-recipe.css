@@ -8,6 +8,10 @@ body {
 	font-family: verdana;
 }
 
+button {
+	outline: none;
+}
+
 #header-main {
 	display: flex;
 	width: 100vw;
@@ -48,6 +52,9 @@ body {
 	background-color: #AEDAAC;
 	border-radius: 15px;
 	cursor: pointer;
+}
+#header-sub2 > button:active {
+	border: none;
 }
 
 #wrapper {
