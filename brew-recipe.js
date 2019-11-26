@@ -148,37 +148,89 @@ let ciderSwitch = [0,0,0,0];
 
 
 function beerSort(num) {
-	if (beerSwitch[num] === 0) {
+	if (beerSwitch[num] === 0 && num === 0) {
 		beerBrews.sort((a,b)=>a.brewName<b.brewName?-1:a.brewName>b.brewName?1:0);
 		beerRecipes();
 		beerSwitch[num] = 1;
 	}
-	else if (beerSwitch[num] === 1) {
+	else if (beerSwitch[num] === 1 && num === 0) {
 		beerBrews.sort((a,b)=>a.brewName<b.brewName?1:a.brewName>b.brewName?-1:0);
 		beerRecipes();
 		beerSwitch[num] = 0;
 	}
-
+	else if (beerSwitch[num] === 0 && num === 1) {
+		beerBrews.sort((a,b)=>a.brewStyle<b.brewStyle?-1:a.brewStyle>b.brewStyle?1:0);
+		beerRecipes();
+		beerSwitch[num] = 1;
+	}
+	else if (beerSwitch[num] === 1 && num === 1) {
+		beerBrews.sort((a,b)=>a.brewStyle<b.brewStyle?1:a.brewStyle>b.brewStyle?-1:0);
+		beerRecipes();
+		beerSwitch[num] = 0;
+	}
+	else if (beerSwitch[num] === 0 && num === 2) {
+		beerBrews.sort((a,b)=>a.brewABV<b.brewABV?-1:a.brewABV>b.brewABV?1:0);
+		beerRecipes();
+		beerSwitch[num] = 1;
+	}
+	else if (beerSwitch[num] === 1 && num === 2) {
+		beerBrews.sort((a,b)=>a.brewABV<b.brewABV?1:a.brewABV>b.brewABV?-1:0);
+		beerRecipes();
+		beerSwitch[num] = 0;
+	}
+	else if (beerSwitch[num] === 0 && num === 3) {
+		beerBrews.sort((a,b)=>a.brewRating<b.brewRating?-1:a.brewRating>b.brewRating?1:0);
+		beerRecipes();
+		beerSwitch[num] = 1;
+	}
+	else if (beerSwitch[num] === 1 && num === 3) {
+		beerBrews.sort((a,b)=>a.brewRating<b.brewRating?1:a.brewRating>b.brewRating?-1:0);
+		beerRecipes();
+		beerSwitch[num] = 0;
+	}
 }
 
 function ciderSort(num) {
-	if (ciderSwitch[num] === 0) {
+	if (ciderSwitch[num] === 0 && num === 0) {
 		ciderBrews.sort((a,b)=>a.brewName<b.brewName?-1:a.brewName>b.brewName?1:0);
 		ciderRecipes();
 		ciderSwitch[num] = 1;
 	}
-	else if (ciderSwitch[num] === 1) {
+	else if (ciderSwitch[num] === 1 && num === 0) {
 		ciderBrews.sort((a,b)=>a.brewName<b.brewName?1:a.brewName>b.brewName?-1:0);
 		ciderRecipes();
-		ciderSwitch[num] = 2;
+		ciderSwitch[num] = 0;
 	}
-	else {
+	else if (ciderSwitch[num] === 0 && num === 1) {
+		ciderBrews.sort((a,b)=>a.brewStyle<b.brewStyle?-1:a.brewStyle>b.brewStyle?1:0);
+		ciderRecipes();
+		ciderSwitch[num] = 1;
+	}
+	else if (ciderSwitch[num] === 1 && num === 1) {
+		ciderBrews.sort((a,b)=>a.brewStyle<b.brewStyle?1:a.brewStyle>b.brewStyle?-1:0);
+		ciderRecipes();
+		ciderSwitch[num] = 0;
+	}
+	else if (ciderSwitch[num] === 0 && num === 2) {
+		ciderBrews.sort((a,b)=>a.brewABV<b.brewABV?-1:a.brewABV>b.brewABV?1:0);
+		ciderRecipes();
+		ciderSwitch[num] = 1;
+	}
+	else if (ciderSwitch[num] === 1 && num === 2) {
+		ciderBrews.sort((a,b)=>a.brewABV<b.brewABV?1:a.brewABV>b.brewABV?-1:0);
+		ciderRecipes();
+		ciderSwitch[num] = 0;
+	}
+	else if (ciderSwitch[num] === 0 && num === 3) {
+		ciderBrews.sort((a,b)=>a.brewRating<b.brewRating?-1:a.brewRating>b.brewRating?1:0);
+		ciderRecipes();
+		ciderSwitch[num] = 1;
+	}
+	else if (ciderSwitch[num] === 1 && num === 3) {
+		ciderBrews.sort((a,b)=>a.brewRating<b.brewRating?1:a.brewRating>b.brewRating?-1:0);
 		ciderRecipes();
 		ciderSwitch[num] = 0;
 	}
 }
 
 
-
-//Fix the above 2 sorting functions so they work with all columns,
-//not just the first one.
