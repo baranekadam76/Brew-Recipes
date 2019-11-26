@@ -53,30 +53,27 @@ button {
 	border-radius: 15px;
 	cursor: pointer;
 }
-#header-sub2 > button:active {
-	border: none;
-}
 
 #wrapper {
 	display: flex;
 	width: 100vw;
-	height: 1000px;
+	height: auto;
 	margin-top: 50px;
 }
 
 #bg-left {
 	width: 25%;
-	height: 1000px;
+	height: auto;
 }
 
 #main-content {
 	width: 50%;
-	height: 1000px;
+	height: auto;
 }
 
 #bg-right {
 	width: 25%;
-	height: 1000px;
+	height: auto;
 }
 
 
